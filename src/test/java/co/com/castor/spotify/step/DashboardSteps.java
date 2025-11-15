@@ -21,5 +21,4 @@ public class DashboardSteps {
     public void selectExploreButtonSpotify(){
         dashboardPageSpotify.exploreButton.waitUntilClickable().click();
     }
-
 }

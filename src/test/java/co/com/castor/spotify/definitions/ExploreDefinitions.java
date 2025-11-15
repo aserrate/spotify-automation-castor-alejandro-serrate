@@ -27,6 +27,6 @@ public class ExploreDefinitions {
 
     @Then("I should see public playlists")
     public void seePublicPlaylistSuchAs() {
-        exploreSteps.ensurePublicListAreVisible();
+        exploreSteps.ensurePublicListAreVisible(exploreSteps.getCategoryList());
     }
 }

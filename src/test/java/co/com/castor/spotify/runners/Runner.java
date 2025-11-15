@@ -14,10 +14,7 @@ import org.junit.runner.RunWith;
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         features = "src/test/resources/features",
         glue = "co.com.castor.spotify.definitions",
-        tags = "@generalPublicListSpotify"
+        tags = "@generalLoginSpotify"
 )
 public class Runner {
-    static {
-        System.setProperty("environment", "default");
-    }
 }

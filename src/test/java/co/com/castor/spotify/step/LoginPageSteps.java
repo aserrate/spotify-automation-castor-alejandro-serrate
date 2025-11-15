@@ -34,7 +34,7 @@ public class LoginPageSteps {
 
     @Step("Ensure the invalid email")
     public void resultsOfInvalidEmail(){
-        that(firstLoginPageSpotify.usernameErrorMessage.isVisible()).isTrue();
+        firstLoginPageSpotify.usernameErrorMessage.waitUntilVisible();
         that(firstLoginPageSpotify.usernameErrorMessage.getTextContent().equals(INVALID_USERNAME_OR_EMAIL));
     }
 
@@ -53,7 +53,7 @@ public class LoginPageSteps {
 
     @Step("Ensure credentials are invalid")
     public void resultsOfInvalidCredentials(){
-        that(loginWithPasswordPageSpotify.alertInvalidCredentials.isVisible()).isTrue();
+        loginWithPasswordPageSpotify.alertInvalidCredentials.waitUntilVisible();
         that(loginWithPasswordPageSpotify.alertInvalidCredentials.getTextContent().equals(INVALID_CREDENTIALS));
     }
 }

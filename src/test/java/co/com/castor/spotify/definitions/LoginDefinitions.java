@@ -3,6 +3,7 @@ package co.com.castor.spotify.definitions;
 import co.com.castor.spotify.step.DashboardSteps;
 import co.com.castor.spotify.step.LoginFlowsSteps;
 import co.com.castor.spotify.step.LoginPageSteps;
+import co.com.castor.spotify.utils.EnvironmentUtils;
 import co.com.castor.spotify.utils.FakeDataUtils;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -34,37 +35,32 @@ public class LoginDefinitions {
 
     @When("I enter an invalid email")
     public void iAmEnteringInvalidEmail() {
-
         loginPageSteps.enterEmailToLogin(FakeDataUtils.invalidEmail());
     }
 
     @When("I enter a valid email")
     public void iAmEnteringValidEmail() {
-        loginPageSteps.enterEmailToLogin("spotifytestcastor@gmail.com");
+        loginPageSteps.enterEmailToLogin(EnvironmentUtils.email());
         loginPageSteps.continueLoginWithPassword();
     }
 
     @And("I enter a invalid password")
     public void iAmEnteringInvalidPassword() {
-
         loginPageSteps.enterPasswordLogin(FakeDataUtils.randomPassword(8,16));
     }
 
     @And("I enter a valid password")
     public void iAmEnteringValidPassword(){
-
-        loginPageSteps.enterPasswordLogin("C4st0r2025*");
+        loginPageSteps.enterPasswordLogin(EnvironmentUtils.password());
     }
 
     @Then("an error message should be displayed with invalid Email Message")
     public void messageErrorSouldBeDisplayedInvalidEmail() {
-
         loginPageSteps.resultsOfInvalidEmail();
     }
 
     @Then("an error message should be displayed with invalid password Message")
     public void messageErrorShouldBeDisplayedInvalidPassword() {
-
         loginPageSteps.resultsOfInvalidCredentials();
     }
 
