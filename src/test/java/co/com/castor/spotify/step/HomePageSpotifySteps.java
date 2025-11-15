@@ -29,7 +29,7 @@ public class HomePageSpotifySteps {
 
     @Step("Ensure the results")
     public void resultsOfSearch(String keyValue){
-        that(homePageSpotify.tracksResultSection.isVisible()).isTrue();
+        homePageSpotify.tracksResultSection.waitUntilVisible();
         that(homePageSpotify.songPresentations.getTextContent().contains(keyValue));
     }
 }
