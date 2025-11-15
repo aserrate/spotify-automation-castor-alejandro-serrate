@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         features = "src/test/resources/features",
         glue = "co.com.castor.spotify.definitions",
-        tags = "@generalLoginSpotify"
+        tags = "@generalSearchSpotify"
 )
 public class Runner {
 }
