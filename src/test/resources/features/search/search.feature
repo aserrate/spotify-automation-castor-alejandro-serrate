@@ -2,7 +2,10 @@
 #Author:aserrate1712@hotmail.com
 
 @regression
-Feature: Song and Artist Search and explore relevant music results
+Feature: Song and Artist Search
+  As a Spotify user
+  I want to search for songs or artists
+  So that I can explore relevant music results
 
   @generalSearchSpotify
   Scenario: Search for Coldplay artist ColdPlay

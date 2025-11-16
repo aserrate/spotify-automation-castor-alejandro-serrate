@@ -2,7 +2,11 @@
 #Author:aserrate1712@hotmail.com
 
 @regression
-Feature: User Login I want to log in securely So that my account is protected from invalid access attempts
+Feature: User Login
+  As a Spotify user
+  I want to log in securely
+  So that my account is protected from invalid access attempts
+
   Background: enter to the spotify webpage
     Given I am on the Spotify Web home page
 

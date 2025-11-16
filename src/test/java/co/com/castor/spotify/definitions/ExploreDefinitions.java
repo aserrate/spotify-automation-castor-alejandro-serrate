@@ -1,7 +1,7 @@
 package co.com.castor.spotify.definitions;
 
-import co.com.castor.spotify.step.DashboardSteps;
-import co.com.castor.spotify.step.ExploreSteps;
+import co.com.castor.spotify.steps.DashboardSteps;
+import co.com.castor.spotify.steps.ExploreSteps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -20,8 +20,8 @@ public class ExploreDefinitions {
         dashboardSteps.selectExploreButtonSpotify();
     }
 
-    @When("I select gender of the list {string}")
-    public void selectGenderOfList(String gender){
+    @When("I select genre of the list {string}")
+    public void selectGenreOfList(String gender){
         exploreSteps.selectGenderByName(gender);
     }
 

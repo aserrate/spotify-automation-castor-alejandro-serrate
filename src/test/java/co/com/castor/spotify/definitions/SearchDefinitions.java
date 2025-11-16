@@ -1,6 +1,6 @@
 package co.com.castor.spotify.definitions;
 
-import co.com.castor.spotify.step.HomePageSpotifySteps;
+import co.com.castor.spotify.steps.HomePageSpotifySteps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

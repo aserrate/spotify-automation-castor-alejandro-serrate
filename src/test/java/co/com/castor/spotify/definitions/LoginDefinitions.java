@@ -1,8 +1,8 @@
 package co.com.castor.spotify.definitions;
 
-import co.com.castor.spotify.step.DashboardSteps;
-import co.com.castor.spotify.step.LoginFlowsSteps;
-import co.com.castor.spotify.step.LoginPageSteps;
+import co.com.castor.spotify.steps.DashboardSteps;
+import co.com.castor.spotify.steps.LoginFlowsSteps;
+import co.com.castor.spotify.steps.LoginPageSteps;
 import co.com.castor.spotify.utils.EnvironmentUtils;
 import co.com.castor.spotify.utils.FakeDataUtils;
 import io.cucumber.java.en.And;

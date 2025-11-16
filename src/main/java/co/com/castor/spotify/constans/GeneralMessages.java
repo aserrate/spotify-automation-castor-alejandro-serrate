@@ -9,5 +9,6 @@ public class GeneralMessages {
     public static final String INVALID_CREDENTIALS =
             "Nombre de usuario o contraseña incorrectos.";
 
-    public static final String YOUR_LIBRARY = "Tu biblioteca";
+    public static final String WILLPAUSE =
+            "Pausar";
 }

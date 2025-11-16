@@ -1,4 +1,4 @@
-package co.com.castor.spotify.step;
+package co.com.castor.spotify.steps;
 
 import co.com.castor.spotify.pages.HomePageSpotify;
 import co.com.castor.spotify.pages.FirstLoginPageSpotify;

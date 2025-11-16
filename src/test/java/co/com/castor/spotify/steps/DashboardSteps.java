@@ -1,4 +1,4 @@
-package co.com.castor.spotify.step;
+package co.com.castor.spotify.steps;
 
 import co.com.castor.spotify.pages.DashboardPageSpotify;
 import net.serenitybdd.annotations.Step;
@@ -13,7 +13,7 @@ public class DashboardSteps {
 
     @Step("Ensure that login was succesfull")
     public void ensureLoginSuccesfull(){
-        that(dashboardPageSpotify.userButton.isVisible()).isTrue();
+        that(dashboardPageSpotify.userButton.waitUntilVisible().isVisible()).isTrue();
         that(dashboardPageSpotify.libraryButton.isClickable()).isTrue();
     }
 

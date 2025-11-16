@@ -15,4 +15,8 @@ public class DashboardPageSpotify extends PageObject {
 
     @FindBy(css = "button[data-testid='browse-button']")
     public WebElementFacade exploreButton;
+
+    @FindBy(css = "div[data-testid='herocard-click-handler']")
+    public WebElementFacade relevantArtist;
+
 }

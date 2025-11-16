@@ -85,15 +85,22 @@ src
 
 ## 📌 5. Instrucciones de ejecución
 ▶ Ejecutar todas las pruebas
-./gradlew clean test
+./gradlew clean test \
+-DSPOTIFY_EMAIL="genericemail@correo.com" \
+-DSPOTIFY_PASSWORD="passwordUser"
 
 ▶ Ejecutar pruebas filtradas por tag
-./gradlew clean test -Dcucumber.filter.tags="@login"
+./gradlew clean test \
+-Dcucumber.filter.tags="@login" \
+-DSPOTIFY_EMAIL="genericemail@correo.com" \
+-DSPOTIFY_PASSWORD="passwordUser"
 
 ▶ Ejecutar por Runner específico
 ./gradlew clean test --tests *Runner
+-DSPOTIFY_EMAIL="genericemail@correo.com" \
+-DSPOTIFY_PASSWORD="passwordUser"
 
-## 6. Generación del reporte de Serenity
+## 6.📌 Generación del reporte de Serenity
 
 Después de ejecutar las pruebas, Serenity genera un reporte HTML en:
 
@@ -172,3 +179,36 @@ Capturas de cada interacción
 Highlight de elementos
 
 Tiempos exactos
+
+## 📌 8. Ejecución en CI/CD (GitHub Actions)
+
+Ejemplo de workflow (opcional):
+
+name: Run Tests
+
+on:
+push:
+branches: [ "main" ]
+
+jobs:
+test:
+runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Run tests
+        env:
+          SPOTIFY_EMAIL: ${{ secrets.SPOTIFY_EMAIL }}
+          SPOTIFY_PASSWORD: ${{ secrets.SPOTIFY_PASSWORD }}
+        run: ./gradlew clean test
+
+## 📌 9. Autor
+
+Alejandro Serrate
+QA Automation Engineer
+GitHub: https://github.com/aserrate
