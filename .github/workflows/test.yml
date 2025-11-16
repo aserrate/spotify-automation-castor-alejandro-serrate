@@ -24,4 +24,4 @@ jobs:
         env:
           SPOTIFY_EMAIL: ${{ secrets.SPOTIFY_EMAIL }}
           SPOTIFY_PASSWORD: ${{ secrets.SPOTIFY_PASSWORD }}
-        run: ./gradlew clean test -Dcucumber.filter.tags=@generalSearchSpotify --infox
+        run: ./gradlew clean test -Dcucumber.filter.tags=@generalSearchSpotify --info
