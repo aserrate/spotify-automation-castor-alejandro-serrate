@@ -56,9 +56,4 @@ serenity {
     requirementsDir = "src/test/resources/features"
 }
 
-test {
-    systemProperty "SPOTIFY_EMAIL", System.getenv("SPOTIFY_EMAIL")
-    systemProperty "SPOTIFY_PASSWORD", System.getenv("SPOTIFY_PASSWORD")
-}
-
 test.finalizedBy(aggregate)

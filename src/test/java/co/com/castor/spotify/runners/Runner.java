@@ -13,8 +13,7 @@ import org.junit.runner.RunWith;
         },
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         features = "src/test/resources/features",
-        glue = "co.com.castor.spotify.definitions",
-        tags = "@regression"
+        glue = "co.com.castor.spotify.definitions"
 )
 public class Runner {
 }
